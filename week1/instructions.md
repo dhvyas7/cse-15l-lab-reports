@@ -14,3 +14,4 @@ You will then be logged into the remote server and your present working director
 Below is the screenshot of a screen similar to what you will see along with some sample commands:
 
 ![Terminal Screenshot](term.png)
+![Commands Screenshot](commands.png)
