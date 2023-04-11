@@ -1,6 +1,6 @@
 First, open the terminal on your computer or install Visual Studio Code from its website.
 
-![VS Code Website](vscode.png)
+![VS Code Website](vs.png)
 
 Type in the following command:
 ssh cs15lusername@ieng6.ucsd.edu 
