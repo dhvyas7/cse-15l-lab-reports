@@ -16,7 +16,16 @@ Enter your password when prompted and you will have successfully connected to th
 
 ![Login Screen](connect.png)
 
-Below is the screenshot of a screen similar to what you will see along with some sample commands:
+Now that you're logged in try typing some commands like:
+To display all directories and files within the current directory
+`ls`
+To switch into the perl5 directory
+`cd perl5`
+To show the absolute path to the present working directory
+`pwd`
+To close the connection to the ieng6 server
+`logout'
 
-![Terminal Screenshot](term.png)
-![Commands Screenshot](commands.png)
+
+![Commands Screen](commandsamples.png)
+
