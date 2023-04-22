@@ -27,7 +27,7 @@ To show the absolute path to the present working directory
 `pwd`
 
 To close the connection to the ieng6 server
-`logout'
+`logout`
 
 
 ![Commands Screen](commandsamples.png)
