@@ -17,8 +17,10 @@ Enter your password when prompted and you will have successfully connected to th
 ![Login Screen](connect.png)
 
 Now that you're logged in try typing some commands like:
+
 To display all directories and files within the current directory
 `ls`
+
 To switch into the perl5 directory
 `cd perl5`
 
