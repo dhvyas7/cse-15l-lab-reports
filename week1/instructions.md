@@ -21,8 +21,11 @@ To display all directories and files within the current directory
 `ls`
 To switch into the perl5 directory
 `cd perl5`
+
+
 To show the absolute path to the present working directory
 `pwd`
+
 To close the connection to the ieng6 server
 `logout'
 
