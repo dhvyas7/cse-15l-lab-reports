@@ -18,14 +18,14 @@ Enter your password when prompted and you will have successfully connected to th
 
 Now that you're logged in try typing some commands like:
 
-To display all directories and files within the current directory
+To display all directories and files within the current directory (see pwd for info on how to see the current directory)
 `ls`
 
 To switch into the perl5 directory
 `cd perl5`
 
 
-To show the absolute path to the present working directory
+To show the absolute path(i.e. relative path from root) to the present working directory
 `pwd`
 
 To close the connection to the ieng6 server
