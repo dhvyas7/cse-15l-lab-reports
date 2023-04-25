@@ -29,9 +29,9 @@ After this, go back to the homepage and you should see the string you just added
 
 Part 2:
 
-`
+```
 @Test
-  public void testAverage() {
+ public void testAverage(){
     double[] input1 = {5,5,5,5,5};
     assertEquals(5.0, averageWithoutLowest(input1));
   }
@@ -39,7 +39,8 @@ Part 2:
   public void testAverage2() {
     double[] input1 = {1,2,3};
     assertEquals(2.5, averageWithoutLowest(input1));
-  }`
+  }
+```
 
 Here, we get the average as 0.0 even though we would expect 5.0 because the code we've written doesn't consider the scenario where all list elements are equal and so the sum is never incremented leading to the return value of 0
 
