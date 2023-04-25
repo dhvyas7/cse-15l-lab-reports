@@ -42,7 +42,57 @@ Part 2:
   }
 ```
 
-Here, we get the average as 0.0 even though we would expect 5.0 because the code we've written doesn't consider the scenario where all list elements are equal and so the sum is never incremented leading to the return value of 0
+Here, we get the average as 0.0 even though we would expect 5.0 because the code we've written doesn't consider the scenario where all list elements are equal and so the sum is never incremented leading to the return value of 0.
+
+For testAverage2, we get the correct expected value of 2.5
+
+Here are the test results
+![JUnit Test](junittests.png)
+
+The original code is as follows:
+
+```
+static double averageWithoutLowest(double[] arr) {
+    if(arr.length < 2) { return 0.0; }
+    double lowest = arr[0];
+    for(double num: arr) {
+      if(num < lowest) { lowest = num; }
+    }
+    double sum = 0;
+    for(double num: arr) {
+      if(num != lowest) { sum += num; }
+    }
+    return sum / (arr.length - 1);
+  }
+```
 
 
+The fix for the code is as follows:
 
+
+```
+static double averageWithoutLowest(double[] arr) 
+  {
+    double sum=0;
+    double lowest=arr[0];
+    int c=0;
+    if (arr.length==1||arr.length==0)return 0;
+    for(double i:arr)
+    {
+    	if(i==lowest)c++;
+    	else if(i<lowest)lowest=i;
+    }
+    if(c==arr.length)return lowest;
+    for(double i:arr)
+    {
+    	if(i>lowest)sum+=i;
+    }
+    return sum/(arr.length-1);
+  }
+```
+
+
+Part 3:
+
+
+I learned how to set up a web server and create queries. I also learned how to write functionalities like adding a query, removing a query and replacing a query.
