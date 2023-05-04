@@ -6,21 +6,21 @@ import java.net.URI;
 import java.util.ArrayList;
 
 class Handler implements URLHandler {
-    ArrayList<String> library = new ArrayList<String>();
+    ArrayList<String> words = new ArrayList<String>();
 
     public String handleRequest(URI url) {
 
         if (url.getPath().equals("/")) {
-            return toString(library);
+            return toString(words);
 
         } else if (url.getPath().contains("/add-message")) {
 
             String[] parameters = url.getQuery().split("=");
 
             if (parameters[0].equals("s")) {
-                library.add(parameters[1]);
+                words.add(parameters[1]);
 
-                return toString(library);
+                return toString(words);
             }
 
         }
@@ -29,13 +29,13 @@ class Handler implements URLHandler {
             
     }
 
-    public static String toString(ArrayList<String> library) {
-        String listStrings = "";
+    public static String toString(ArrayList<String> arr) {
+        String result = "";
 
-        for(int i = 0; i < library.size(); i++) {
-            listStrings += library.get(i) + "\n";
+        for(int i = 0; i < arr.size(); i++) {
+            result += arr.get(i) + "\n";
         }
-        return listStrings;
+        return result;
     }
 }
 
@@ -69,12 +69,11 @@ Now we can use this for running queries on the web server
 
 Here's a sample showing how to use the query in a URL to add an element to the page
 
-![Run 1](add1.png)
+![Run 1](url1.png)
 
-After this, you should see the string you just added on refreshing the webpage
+You should see the string you just added on refreshing the webpage
 
-![Output 1](op1.png)
-
+![Run 1](op1.png)
 
 Part 2:
 
