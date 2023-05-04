@@ -1,9 +1,58 @@
-Here is the code for the StringServer along with Server which we are using to create a web server:
+Here is the code for the StringServer which we are creating:
 
-![Code Server](serverss.png)
+```
+import java.io.IOException;
+import java.net.URI;
+import java.util.ArrayList;
 
-![Code StringServer](stringserverss.png)
+class Handler implements URLHandler {
+    ArrayList<String> library = new ArrayList<String>();
 
+    public String handleRequest(URI url) {
+
+        if (url.getPath().equals("/")) {
+            return toString(library);
+
+        } else if (url.getPath().contains("/add-message")) {
+
+            String[] parameters = url.getQuery().split("=");
+
+            if (parameters[0].equals("s")) {
+                library.add(parameters[1]);
+
+                return toString(library);
+            }
+
+        }
+
+        return "404 Not Found!";
+            
+    }
+
+    public static String toString(ArrayList<String> library) {
+        String listStrings = "";
+
+        for(int i = 0; i < library.size(); i++) {
+            listStrings += library.get(i) + "\n";
+        }
+        return listStrings;
+    }
+}
+
+class StringServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
+
+```
 The code can be run by inputting the following commands in the terminal
 
 `javac Server.java StringServer.java`
@@ -22,7 +71,7 @@ Here's a sample showing how to use the query in a URL to add an element to the p
 
 ![Run 1](add1.png)
 
-After this, go back to the homepage and you should see the string you just added
+After this, you should see the string you just added on refreshing the webpage
 
 ![Output 1](op1.png)
 
