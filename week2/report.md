@@ -75,13 +75,29 @@ You should see the string you just added on refreshing the webpage
 
 ![Run 1](op1.png)
 
+
+There are 2 methods called during this process:
+
+1. method handlerRequest(URI url)
+
+This method allows us to effectively use the url passed as an argument to get the path, the query data, query type and even add content to our output list as specified. 
+
+The method will throw an error when it is not given a valid URL as it will cause multiple problems while running.
+
+
+2. method toString(String[] arr)
+
+This takes the arr passed to it and converts it to a string in the required output format
+
+Further, any query passed to the url will be typecasted to a string. So for example if 456 is given as a value, it will be read as "456" by the compiler when adding to the word array. 
+
 Part 2:
 
 ```
 @Test
  public void testAverage(){
-    double[] input1 = {5,5,5,5,5};
-    assertEquals(5.0, averageWithoutLowest(input1));
+    double[] input1 = {5,5,5,5,6};
+    assertEquals(6.0, averageWithoutLowest(input1));
   }
 @Test
   public void testAverage2() {
@@ -90,7 +106,7 @@ Part 2:
   }
 ```
 
-Here, we get the average as 0.0 even though we would expect 5.0 because the code we've written doesn't consider the scenario where all list elements are equal and so the sum is never incremented leading to the return value of 0.
+Here, in testAverage, we get the average as 1.5 even though we would expect 5.0 because the code we've written doesn't consider the scenario where multiple list elements are equal to the lowest value. This leads to an error in the output which could be fixed by considering the count of the lowest number in the lists.
 
 For testAverage2, we get the correct expected value of 2.5
 
@@ -124,23 +140,25 @@ static double averageWithoutLowest(double[] arr)
     double sum=0;
     double lowest=arr[0];
     int c=0;
-    if (arr.length==1||arr.length==0)return 0;
+    if (arr.length<2)return 0;
     for(double i:arr)
     {
-    	if(i==lowest)c++;
+    	if(i==lowest)
     	else if(i<lowest)lowest=i;
     }
-    if(c==arr.length)return lowest;
+
     for(double i:arr)
     {
     	if(i>lowest)sum+=i;
+	if(i==lowest)c++;
     }
-    return sum/(arr.length-1);
+    return sum/(arr.length-c);
   }
 ```
 
+This modified code now gives us the valid expected output of 1.5
 
 Part 3:
 
 
-I learned how to set up a web server and create queries. I also learned how to write functionalities like adding a query, removing a query and replacing a query.
+I learned how to set up a web server and create queries. I also learned how to write functionalities like adding a query, removing a query and replacing a query. I also learned to write good unit tests and developed the skill of reworking a solution to a problem if it fails for specific edge cases.
