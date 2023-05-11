@@ -44,3 +44,20 @@ Will give the same output
 
 
 ![-I output](ssless2.png)
+
+
+
+Option 2: `less -N`
+
+
+The -N option add line numbers to the output
+
+```
+dhyan@MacBook-Pro-6 technical % less -N biomed/rr74.txt
+
+```
+ 
+Will give the output
+
+
+![-N output](ssless3.png)
