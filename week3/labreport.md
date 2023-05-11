@@ -18,3 +18,29 @@ dhyan@MacBook-Pro-6 technical % less-f biomed
 ```
 
 ![-f output](ssless.png)
+
+
+With -f or without, we get the same output in both cases if we give it a file i.e., it reads the entire file
+
+
+```
+dhyan@MacBook-Pro-6 technical % less -f biomed/1468-6708-3-1.txt
+dhyan@MacBook-Pro-6 technical % less biomed/1468-6708-3-1.txt
+```
+Both commands will give the same output
+
+
+Option 2: `less -i`
+
+
+The -i option ignores case sensitivity while searching i.e., 
+
+```
+dhyan@MacBook-Pro-6 technical % less -I biomed/rR74.txt
+dhyan@MacBook-Pro-6 technical % less biomed/rr74.txt
+```
+ 
+Will give the same output
+
+
+![-I output](ssless2.png)
