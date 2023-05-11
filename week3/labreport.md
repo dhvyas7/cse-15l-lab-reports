@@ -36,7 +36,7 @@ Option 2: `less -i`
 The -i option ignores case sensitivity while searching i.e., 
 
 ```
-dhyan@MacBook-Pro-6 technical % less -i biomed/rR74.txt
+dhyan@MacBook-Pro-6 technical % less -I biomed/rR74.txt
 dhyan@MacBook-Pro-6 technical % less biomed/rr74.txt
 ```
  
@@ -54,10 +54,12 @@ The -N option add line numbers to the output
 
 ```
 dhyan@MacBook-Pro-6 technical % less -N biomed/rr74.txt
+dhyan@MacBook-Pro-6 technical % less -N government/About_LSC/ONTARIO_LEGAL_AID_SERIES.txt
 
 ```
  
-Will give the output
+Will give the outputs
 
 
 ![-N output](ssless3.png)
+![-N output](ssless4.png)
