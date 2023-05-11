@@ -47,7 +47,7 @@ Will give the same output
 
 
 
-Option 2: `less -N`
+Option 3: `less -N`
 
 
 The -N option add line numbers to the output
@@ -63,3 +63,45 @@ Will give the outputs
 
 ![-N output](ssless3.png)
 ![-N output](ssless4.png)
+
+
+
+
+Option 3: `less -N`
+
+
+The -N option add line numbers to the output
+
+```
+dhyan@MacBook-Pro-6 technical % less -N biomed/rr74.txt
+dhyan@MacBook-Pro-6 technical % less -N government/About_LSC/ONTARIO_LEGAL_AID_SERIES.txt
+
+```
+ 
+Will give the outputs
+
+
+![-N output](ssless3.png)
+![-N output](ssless4.png)
+
+
+
+Option 3: `less -m`
+
+
+The -N option add the percentage of the file covered to the output.
+
+For example, when we run the following commands, we see the screens attached below:
+
+
+```
+dhyan@MacBook-Pro-6 technical % less -m biomed/rr74.txt
+dhyan@MacBook-Pro-6 technical % less -m government/About_LSC/ONTARIO_LEGAL_AID_SERIES.txt
+
+```
+ 
+
+
+
+![-N output](ssless5.png)
+![-N output](ssless6.png)
