@@ -36,7 +36,7 @@ Option 2: `less -i`
 The -i option ignores case sensitivity while searching i.e., 
 
 ```
-dhyan@MacBook-Pro-6 technical % less -I biomed/rR74.txt
+dhyan@MacBook-Pro-6 technical % less -i biomed/rR74.txt
 dhyan@MacBook-Pro-6 technical % less biomed/rr74.txt
 ```
  
