@@ -10,3 +10,11 @@ For example, without -f, we get the following output:
 dhyan@MacBook-Pro-6 technical % less biomed
 biomed is a directory
 ```
+
+However, with -f, we get the following output:
+
+```
+dhyan@MacBook-Pro-6 technical % less-f biomed
+```
+
+![-f output](ssless.png)
