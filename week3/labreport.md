@@ -50,7 +50,7 @@ Will give the same output:
 
 Using `less -i` for a different file:
 
-`dhyan@MacBook-Pro-7 technical % less -f biomed/GB-2003-4-4-r26.txt`
+`dhyan@MacBook-Pro-7 technical % less -i biomed/GB-2003-4-4-r26.txt`
 
 We get the following output:
 
