@@ -4,23 +4,23 @@ Option 1: `less -f`
 
 This option forces less to open the file even if it is a directory. While using less without this option leads to an error, using the option tries to open it and then open the directory.
 
-For example, without -f, we get the following output:
+For example, without `-f`, we get the following output:
 
 ```
 dhyan@MacBook-Pro-6 technical % less biomed
 biomed is a directory
 ```
 
-However, with -f, we get the following output:
+However, with `-f`, we get the following output:
 
 ```
-dhyan@MacBook-Pro-6 technical % less-f biomed
+dhyan@MacBook-Pro-6 technical % less -f biomed
 ```
 
 ![-f output](ssless.png)
 
 
-With -f or without, we get the same output in both cases if we give it a file i.e., it reads the entire file
+With `-f` or without, we get the same output in both cases if we give it a file i.e., it reads the entire file.
 
 
 ```
@@ -36,21 +36,21 @@ Option 2: `less -i`
 The -i option ignores case sensitivity while searching i.e., 
 
 ```
-dhyan@MacBook-Pro-6 technical % less -I biomed/rR74.txt
+dhyan@MacBook-Pro-6 technical % less -i biomed/rR74.txt
 dhyan@MacBook-Pro-6 technical % less biomed/rr74.txt
 ```
  
-Will give the same output
+Will give the same output:
 
 
-![-I output](ssless2.png)
+![-i output](ssless2.png)
 
 
 
 Option 3: `less -N`
 
 
-The -N option add line numbers to the output
+The -N option add line numbers to the output as seen below:
 
 ```
 dhyan@MacBook-Pro-6 technical % less -N biomed/rr74.txt
@@ -58,38 +58,17 @@ dhyan@MacBook-Pro-6 technical % less -N government/About_LSC/ONTARIO_LEGAL_AID_S
 
 ```
  
-Will give the outputs
+Will give the following outputs:
 
 
 ![-N output](ssless3.png)
 ![-N output](ssless4.png)
 
 
+Option 4: `less -m`
 
 
-Option 3: `less -N`
-
-
-The -N option add line numbers to the output
-
-```
-dhyan@MacBook-Pro-6 technical % less -N biomed/rr74.txt
-dhyan@MacBook-Pro-6 technical % less -N government/About_LSC/ONTARIO_LEGAL_AID_SERIES.txt
-
-```
- 
-Will give the outputs
-
-
-![-N output](ssless3.png)
-![-N output](ssless4.png)
-
-
-
-Option 3: `less -m`
-
-
-The -N option add the percentage of the file covered to the output.
+The `-m` option adds the percentage of the file covered to the output.
 
 For example, when we run the following commands, we see the screens attached below:
 
@@ -99,9 +78,13 @@ dhyan@MacBook-Pro-6 technical % less -m biomed/rr74.txt
 dhyan@MacBook-Pro-6 technical % less -m government/About_LSC/ONTARIO_LEGAL_AID_SERIES.txt
 
 ```
- 
 
 
+![-m output](ssless5.png)
+![-m output](ssless6.png)
 
-![-N output](ssless5.png)
-![-N output](ssless6.png)
+
+Sources:
+
+`man less` on the command line
+[Unix Less Options](https://phoenixnap.com/kb/less-command-in-linux)
