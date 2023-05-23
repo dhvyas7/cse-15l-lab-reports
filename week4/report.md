@@ -30,7 +30,7 @@ Step 4(7):
 
 ```
 vi ListExamples.java<enter>
-<down>*40 I <backspace> 2 <esc> :wq
+<down>*40 I <backspace> 2 <esc> :wq<enter>
 ```
 
 ![step7](step7.png)
@@ -45,10 +45,10 @@ Step 5(8):
 
 Step 6(9):
 ```
-git add Li<tab>.java
-git commit
-i Fixed Code For Testing <esc> :wq 
-git push origin   
+git add Li<tab>.java <enter>
+git commit <enter>
+i Fixed Code For Testing <esc> :wq <enter>
+git push origin<enter>  
 ```
 
 
