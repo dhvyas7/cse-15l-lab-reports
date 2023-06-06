@@ -26,7 +26,7 @@ My terminal says this instead of running the tests. The student-submissions fold
 Detail the failure-inducing input and context. That might mean any or all of the command you're running, a test case, command-line arguments, working directory, even the last few commands you ran. Do your best to provide as much context as you can.
 
 
-I am basically trying to run the autogravder script from the last lab using the bash script
+I am basically trying to run the autograder script from the last lab using the bash script
 
 
 TA Response:
@@ -34,12 +34,15 @@ TA Response:
 Hi XYZ, I think you're missing an argument which needs to be passed for running the script. Look at your bash script once again and you should see what you're missing :)
 
 
+![ss1](r5_1.png)
+
 
 Student Conclusion:
 
 The student forgot to add the link to the GitHub repository that was being cloned. 
 
 
+![ss2](r5_2.png)
 
 Setup:
 
